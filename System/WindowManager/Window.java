@@ -1,6 +1,7 @@
 package obsidian.System.WindowManager;
 
 import obsidian.System.GraphicsManager.Sources.Texture;
+import obsidian.System.GraphicsManager._3DManager_.Coordinates.Camera;
 
 import javax.swing.*;
 import java.awt.*;
@@ -33,6 +34,14 @@ public class  Window {
     private int canvasWidth;
     private int canvasHeight;
     private Dimension resolution;
+
+    private Camera camera = new Camera(0, 0, 15);
+    public Camera getCamera() {
+        return camera;
+    }
+    public void setCamera(Camera camera) {
+        this.camera = camera;
+    }
     private boolean[] pixel_occupied = new boolean[canvas.getWidth() * canvas.getHeight()];
     private boolean debugging = false;
 

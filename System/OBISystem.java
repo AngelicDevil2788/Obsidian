@@ -1,5 +1,7 @@
 package obsidian.System;
 
+import obsidian.System.GraphicsManager._3DManager_.Coordinates.PointConverter;
+import obsidian.System.GraphicsManager._3DManager_.Coordinates.Polygon;
 import obsidian.System.GraphicsManager.Sources.Texture;
 import obsidian.System.GraphicsManager.Sources.TextureSheet;
 import obsidian.System.WindowManager.Window;
@@ -44,7 +46,6 @@ public class OBISystem {
     }
 
     public static class graphics {
-
         public static class texture {
             private static final Map<String, TextureSheet> textureSheets = new HashMap<String, TextureSheet>();
 
@@ -123,6 +124,10 @@ public class OBISystem {
                 Window newWindow = new Window();
                 newWindow.init(width, height, resolution, name, backgroundColor, destroySequence, GUIObjects, GUIObjectFunctions);
                 systemWindows.add(newWindow);
+            }
+
+            public static void addWindow(Window window) {
+                systemWindows.add(window);
             }
 
             public static Window getWindowByName(String name) {
