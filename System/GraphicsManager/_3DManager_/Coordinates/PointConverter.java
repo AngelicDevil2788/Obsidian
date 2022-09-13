@@ -49,9 +49,9 @@ public class PointConverter {
         if (degrees > 360) {degrees -= 360;};
         double radius = Math.sqrt(p.x * p.x + p.z * p.z);
         double theta = Math.atan2(p.x, p.z);
-        theta += 2*Math.PI/360*degrees*(CW?-1:1);
-        p.x = radius * Math.sin(theta);
-        p.z = radius * Math.cos(theta);
+        theta += Math.toRadians(degrees)*(CW?-1:1);
+        p.x += Math.sin(theta);
+        p.z += Math.cos(theta);
 
     }
     public static void rotateAxisZ(Point3D p, boolean CW, double degrees, Point3D center) {
