@@ -1,7 +1,5 @@
 package obsidian.System;
 
-import obsidian.System.GraphicsManager._3DManager_.Coordinates.PointConverter;
-import obsidian.System.GraphicsManager._3DManager_.Coordinates.Polygon;
 import obsidian.System.GraphicsManager.Sources.Texture;
 import obsidian.System.GraphicsManager.Sources.TextureSheet;
 import obsidian.System.WindowManager.Window;

@@ -59,9 +59,9 @@ public class Polygon {
 
     public void rotate(boolean CW, double xDegrees, double yDegrees, double zDegrees, Point3D center) {
         for (Point3D p : points) {
-            PointConverter.rotateAxisX(p, CW, xDegrees, center);
-            PointConverter.rotateAxisY(p, CW, yDegrees, center);
-            PointConverter.rotateAxisZ(p, CW, zDegrees, center);
+            PointConverter.rotateAxisX(p, CW, xDegrees, new Point3D(center.x, center.y, center.z));
+            PointConverter.rotateAxisY(p, CW, yDegrees, new Point3D(center.x, center.y, center.z));
+            PointConverter.rotateAxisZ(p, CW, zDegrees, new Point3D(center.x, center.y, center.z));
         }
     }
 
